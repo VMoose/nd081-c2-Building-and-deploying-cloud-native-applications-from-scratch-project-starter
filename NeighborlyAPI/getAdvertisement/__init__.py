@@ -14,10 +14,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     
     if id:
         try:
-            url = "localhost"  # TODO: Update with appropriate MongoDB connection information
+            url = ""  # TODO: Update with appropriate MongoDB connection information
             client = pymongo.MongoClient(url)
-            database = client['azure']
-            collection = database['advertisements']
+            database = client['mongodbtryout']
+            collection = database['ads']
            
             query = {'_id': ObjectId(id)}
             result = collection.find_one(query)

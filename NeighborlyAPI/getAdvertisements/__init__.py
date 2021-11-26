@@ -6,10 +6,10 @@ from bson.json_util import dumps
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
     try:
-        url = "localhost"  # TODO: Update with appropriate MongoDB connection information
+        url = ""  # TODO: Update with appropriate MongoDB connection information
         client = pymongo.MongoClient(url)
-        database = client['azure']
-        collection = database['advertisements']
+        database = client['mongodbtryout']
+        collection = database['ads']
 
 
         result = collection.find({})
